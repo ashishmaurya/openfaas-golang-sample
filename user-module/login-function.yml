@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  login-function:
+    lang: golang-middleware
+    handler: ./login-function
+    image: login-function:latest
+    # build_args:
+    #   GO111MODULE: on
+
